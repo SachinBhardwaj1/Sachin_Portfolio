@@ -6,7 +6,7 @@ function Homepage() {
   return (
     <section className={styles.homepage}>
       <div className={styles.homepageContent}>
-        <img src="src/assets/SachinPic.png" alt="Sachin Bhardwaj" className={styles.homepageImage} />
+        <img src={"/SachinPic.png"} alt="Sachin Bhardwaj" className={styles.homepageImage} />
         <h1>Hello, I&apos;m <span className={styles.highlight}>Sachin</span> 👋</h1>
         <h2>I&apos;m a Full Stack Developer.</h2>
         <p>🚀 Fueled by Chai ☕ | 🌎 Based in USA 🇺🇸 | 👨‍💻 Software Engineer 💼 </p>

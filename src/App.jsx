@@ -26,7 +26,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${navbarVisible ? "visible" : "hidden"}`}>
       <div className="logo-container">
-        <img src="/src/assets/sachin_logo.png" alt="Sachin Bhardwaj Logo" className="logo" />
+        <img src={"/sachin_logo.png"} alt="Sachin Bhardwaj Logo" className="logo" />
       </div>
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
