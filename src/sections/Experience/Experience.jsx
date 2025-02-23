@@ -3,7 +3,7 @@ import styles from "./ExperienceStyles.module.css";
 const experiences = [
   {
     company: "TCS",
-    role: "Software Engineer",
+    role: "Senior Software Engineer",
     duration: "November 2022 - June 2023",
     description: [
         "⭐ Led React v18 migration, improving UI responsiveness and performance by 35%, increasing ticket booking efficiency and a 25% improvement in application workflow.",
