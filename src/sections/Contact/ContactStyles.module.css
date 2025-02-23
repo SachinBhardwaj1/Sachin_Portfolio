@@ -1,0 +1,71 @@
+/* ContactStyles.module.css */
+
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .contactForm input,
+  .contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contactForm textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .submitButton {
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submitButton:hover {
+    background-color: #1a5ecb;
+  }
+  
+  .socialIcons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .socialIcons a {
+    text-decoration: none;
+    color: #2575fc;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .socialIcons a:hover {
+    color: #1a5ecb;
+  }  

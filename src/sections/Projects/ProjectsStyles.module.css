@@ -1,0 +1,155 @@
+/* ProjectsStyles.module.css - Glassmorphism & Equal Column Distribution */
+
+.projects {
+    padding: 100px 20px;
+    text-align: center;
+    color: whitesmoke;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: auto;
+}
+.projects::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(34, 193, 195, 0.1), rgba(253, 187, 45, 0.1));
+    z-index: -1;
+  }
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background: #ffcc00;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Project Card with Glassmorphism & Hover Animation */
+.projectCard {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.projectCard::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, #ffcc00, #ff0066, #6600ff, #00ccff, #ffcc00);
+    animation: rotateBorder 6s linear infinite;
+    z-index: -1;
+    opacity: 0.2;
+  }
+
+  @keyframes rotateBorder {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.projectCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.25);
+  }
+
+.projectCard h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.projectCard h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #ddd;
+  }
+
+.projectCard p {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+/* Animated List Items */
+.projectCard ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.projectCard ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.projectCard ul li::before {
+    content: "\2713"; /* Checkmark bullet */
+    color: #ffcc00;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+    .projectsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projectsContainer {
+        grid-template-columns: 1fr;
+    }
+    .projectCard {
+        width: 100%;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,148 @@
+/* ExperienceStyles.module.css - High-End Professional UI with Graphics & Animation */
+
+.experience {
+    padding: 100px 20px;
+    text-align: center;
+    color: whitesmoke;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  /* Background Gradient & Decorative Lines */
+  .experience::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(34, 193, 195, 0.1), rgba(253, 187, 45, 0.1));
+    z-index: -1;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background: #ffcc00;
+    margin: 10px auto 0;
+    border-radius: 5px;
+  }
+  
+  .experienceContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* Professional Card with 3D Effect & Animated Border */
+  .experienceCard {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 15px;
+    width: 85%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid transparent;
+  }
+  
+  .experienceCard::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, #ffcc00, #ff0066, #6600ff, #00ccff, #ffcc00);
+    animation: rotateBorder 6s linear infinite;
+    z-index: -1;
+    opacity: 0.2;
+  }
+  
+  @keyframes rotateBorder {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .experienceCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.25);
+  }
+  
+  .experienceCard h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+  }
+  
+  .experienceCard h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #ddd;
+  }
+  
+  .experienceCard p {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  /* Animated List Items for Descriptions */
+  .experienceCard ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .experienceCard ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .experienceCard ul li::before {
+    content: ""; /* Checkmark bullet */
+    color: #ffcc00;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .experienceCard {
+      width: 100%;
+      padding: 20px;
+    }
+  }  
